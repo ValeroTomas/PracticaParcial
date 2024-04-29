@@ -4,21 +4,21 @@ import java.util.Objects;
 
 public class Auto extends Vehiculo{
 
-    public Integer caja;
+    public String caja;
     public String listaDePrestaciones;
 
 
-    public Auto(String patente, String marca, String modelo, double consumo, double precio, Integer ruedas, Integer caja, String listaDePrestaciones) {
+    public Auto(String patente, String marca, String modelo, double consumo, double precio, Integer ruedas, String caja, String listaDePrestaciones) {
         super(patente, marca, modelo, consumo, precio, ruedas);
-        this.caja = caja;
         this.listaDePrestaciones = listaDePrestaciones;
+        this.caja = caja;
     }
 
-    public Integer getCaja() {
+    public String getCaja() {
         return caja;
     }
 
-    public void setCaja(Integer caja) {
+    public void setCaja(String caja) {
         this.caja = caja;
     }
 
@@ -32,16 +32,15 @@ public class Auto extends Vehiculo{
 
     @Override
     public String toString() {
-        return "Auto{" +
-                "caja=" + caja +
-                ", listaDePrestaciones='" + listaDePrestaciones + '\'' +
-                ", patente='" + patente + '\'' +
-                ", marca='" + marca + '\'' +
-                ", modelo='" + modelo + '\'' +
-                ", consumo=" + consumo +
-                ", precio=" + precio +
-                ", ruedas=" + ruedas +
-                '}';
+        return  "\nAuto" +
+                "\nCaja= " + caja +
+                "\nPrestaciones ='" + listaDePrestaciones + '\'' +
+                "\nPatente= '" + patente + '\'' +
+                "\nMarca= '" + marca + '\'' +
+                "\nModelo= '" + modelo + '\'' +
+                "\nConsumo= " + consumo +
+                "\nPrecio= " + precio +
+                "\nRuedas= " + ruedas;
     }
 
     @Override

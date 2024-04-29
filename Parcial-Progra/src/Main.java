@@ -1,14 +1,23 @@
 import java.lang.*;
-import Concesionario.Auto;
+import Concesionario.*;
 
 public class Main {
     public static void main(String[] args) {
 
+        Auto auto1 = new Auto("ABC123", "Toyota", "2003", 1.3, 15, 4, "Manual", "Esta Lindo");
+        Moto moto1 = new Moto("DEF456", "Huawei", "2013", 0.5, 7, 2, 110, true);
+        Concesionario nuevo = new Concesionario();
 
-        Auto autito1 = new Auto("a", "a", "1", 1,1,1,1,"esta lindo");
-        Auto autito2 = new Auto("a", "a", "1", 1,1,1,1,"esta lindo");
+        nuevo.agregarVehiculo(auto1);
+        nuevo.agregarVehiculo(moto1);
 
-        System.out.printf(autito1.toString());
+        nuevo.borrarPorPatente("DEF456");
+
+        nuevo.devolverListado();
+
+        System.out.println("\nVehiculos: " + nuevo.contarVehiculo());
+
+
 
 
     }

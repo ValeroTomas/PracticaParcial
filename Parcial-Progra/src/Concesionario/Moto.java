@@ -1,5 +1,7 @@
 package Concesionario;
 
+import java.util.Objects;
+
 public class Moto extends Vehiculo{
     public Integer cilindrada;
     public boolean baul;
@@ -26,5 +28,24 @@ public class Moto extends Vehiculo{
         this.baul = baul;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Moto moto = (Moto) o;
+        return baul == moto.baul && cilindrada.equals(moto.cilindrada);
+    }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(cilindrada, baul);
+    }
+
+    @Override
+    public String toString() {
+        return "\nMoto" +
+                "\nCilindrada= " + cilindrada +
+                "\nBaul= " + baul;
+
+    }
 }
